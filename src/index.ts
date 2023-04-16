@@ -86,22 +86,21 @@
 
 // console.log(arr);
 
-//@ Generics 
+//@ Generics
 
 // const toArray = <T>(x: T, y: T, z: T) => {
 //     return [x, y, z];
 //   };
 //   let arr = toArray<string>("x", "x", "x");
-  
+
 //   console.log(arr);
 
 // const toArray = <X ,Y , Z>(x: X, y: Y, z: Z) => {
 //     return [x, y, z];
 //   };
 //   let arr = toArray<string , number , boolean>("x", true , 1);
-  
-//   console.log(arr);
 
+//   console.log(arr);
 
 /// @ UNKOWn
 // let test :unknown
@@ -118,3 +117,55 @@
 
 // }
 // test(123)
+
+// console.log(process.env.USER)
+// declare const process:any
+
+// const main = () => {
+//   setTimeout(() => {
+//     console.log("1s")
+//     return setTimeout(() => {
+//         console.log("2s")
+//       return setTimeout(() => {
+//         console.log("3s")
+//       }, 1000);
+//     }, 1000);
+//   }, 1000);
+// };
+// main()
+
+
+
+// const delay = 
+
+
+// const update = async (time:number , value:string)=>{
+//     setTimeout(()=>{
+//         console.log(value)
+//     }, time) 
+//     }
+    
+//     update(1000 , "1s")
+//     update(2000 , "2s")
+//     update(3000 , "3s")
+
+/**
+ * @async @await
+ */
+
+const delay = async (ms:number) => 
+{ return new Promise (res => setTimeout(res , ms))
+
+
+
+}
+
+const timeout = async () =>{
+     await delay(1000)
+    console.log("1s")
+    await delay(1000)
+    console.log("2s")
+    await delay(1000)
+    console.log("3s")
+}
+timeout()
